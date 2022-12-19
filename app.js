@@ -6,13 +6,105 @@ const addCardButton = document.getElementById("add-card-button");
 
 let cards = [
   {
-    question: "Deutschland",
-    answer: "Alemanha",
-  },
-  {
-    question: "Handy",
-    answer: "Celular",
-  },
+    question: "groß",
+    answer: "grande",
+    },
+    {
+    question: "klein",
+    answer: "pequeno",
+    },
+    {
+    question: "billig",
+    answer: "barato",
+    },
+    {
+    question: "teuer",
+    answer: "caro",
+    },
+    {
+    question: "schön",
+    answer: "bonito",
+    },
+    {
+    question: "hässlich",
+    answer: "feio",
+    },
+    {
+    question: "fern",
+    answer: "distante",
+    },
+    {
+    question: "nah",
+    answer: "próximo",
+    },
+    {
+    question: "freundlich",
+    answer: "amigável",
+    },
+    {
+    question: "unfreundlich",
+    answer: "antipático",
+    },
+    {
+    question: "gut",
+    answer: "bom",
+    },
+    {
+    question: "schlecht",
+    answer: "ruim",
+    },
+    {
+    question: "warm",
+    answer: "quente",
+    },
+    {
+    question: "kalt",
+    answer: "frio",
+    },
+    {
+    question: "modern",
+    answer: "moderno",
+    },
+    {
+    question: "klassisch",
+    answer: "clássico",
+    },
+    {
+    question: "hell",
+    answer: "claro",
+    },
+    {
+    question: "dunkel",
+    answer: "escuro",
+    },
+    {
+    question: "neu",
+    answer: "novo",
+    },
+    {
+    question: "alt",
+    answer: "velho",
+    },
+    {
+    question: "interessant",
+    answer: "interessante",
+    },
+    {
+    question: "langweilig",
+    answer: "entediante",
+    },
+    {
+    question: "müde",
+    answer: "cansado",
+    },
+    {
+    question: "kaputt",
+    answer: "quebrado",
+    },
+    {
+    question: "lecker",
+    answer: "saboroso",
+    }
 ];
 
 let currentCardIndex = 0;
@@ -20,8 +112,8 @@ let currentCardIndex = 0;
 // Display the question on the front of the card
 flashcardFront.innerHTML = cards[currentCardIndex].question;
 
-// Set the timer to 10 seconds
-let timeLeft = 10;
+// Set the timer to 5 seconds
+let timeLeft = 5;
 
 let countdown;
 
@@ -42,7 +134,7 @@ function startTimer() {
           currentCardIndex = 0;
         }
         flashcardFront.innerHTML = cards[currentCardIndex].question;
-        timeLeft = 10;
+        timeLeft = 5;
         flashcardBack.innerHTML = "";
         flashcardContainer.classList.remove("flip");
         clearInterval(countdown);
@@ -70,7 +162,7 @@ addCardButton.addEventListener("click", () => {
   // Display the new card and restart the timer
   currentCardIndex = cards.length - 1;
   flashcardFront.innerHTML = cards[currentCardIndex].question;
-  timeLeft = 10;
+  timeLeft = 5;
   flashcardBack.innerHTML = "";
   flashcardContainer.classList.remove("flip");
   clearInterval(countdown);
