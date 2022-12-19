@@ -112,6 +112,25 @@ let currentCardIndex = 0;
 // Display the question on the front of the card
 flashcardFront.innerHTML = cards[currentCardIndex].question;
 
+// Shuffle the cards
+function shuffleCards(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+  return array;
+}
+
+cards = shuffleCards(cards);
+
+// Display the card
+function displayCard(card) {
+  flashcardFront.innerHTML = card.question;
+}
+
+// Display the first card in the shuffled array
+displayCard(cards[0]);
+
 // Set the timer to 5 seconds
 let timeLeft = 5;
 
